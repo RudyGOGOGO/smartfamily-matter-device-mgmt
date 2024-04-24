@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "2444e3d0-dc77-4121-ab89-eb96bbb8f0fd",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3891826"
+	},
+	"item": [
+		{
+			"name": "VerifyUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.12.167:8000/user?user_name=4044171080&password=4044171080",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "user_name",
+							"value": "4044171080"
+						},
+						{
+							"key": "password",
+							"value": "4044171080"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDevicesOnProfile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.12.167:8000/matterDevices?profile_id=1001&node_id=1001",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"matterDevices"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1001"
+						},
+						{
+							"key": "node_id",
+							"value": "1001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DiscoverNewMatterDevices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.12.167:8000/discover?profile_id=1001",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"discover"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMatterDevicesOnMatterNodeId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.12.167:8000/matterDevices?node_id=1002",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"matterDevices"
+					],
+					"query": [
+						{
+							"key": "node_id",
+							"value": "1002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDeviceStatus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"operation\": \"updateWithSingleStatus\",\n    \"profile_id\": 1001,\n    \"node_id\": 1001,\n    \"devices\": [\n        {\n            \"device_id\": 1001,\n            \"status\": \"OFF\"\n        },\n        {\n            \"device_id\": 1002,\n            \"status\": \"OFF\"\n        },\n        {\n            \"device_id\": 1003,\n            \"status\": \"OFF\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.12.167:8000/matterDevices",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"matterDevices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDeviceAccess",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"operation\": \"updateWithSingleAccess\",\n    \"profile_id\": 1001,\n    \"node_id\": 1001,\n    \"devices\": [\n        {\n            \"device_id\": 1001,\n            \"access\": true\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.12.167:8000/matterDevices",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"matterDevices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDeviceLocation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"operation\": \"updateWithSingleLocation\",\n    \"profile_id\": 1001,\n    \"node_id\": 1001,\n    \"devices\": [\n        {\n            \"device_id\": 1001,\n            \"location\": \"Not Defined\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.12.167:8000/matterDevices",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"matterDevices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDevicesOnAccountAndNid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.12.167:8000/matterDevices?profile_id=1001&node_id=1001&operation=getDevicesAccessOfAllProfiles&device_id=1001",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"matterDevices"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1001"
+						},
+						{
+							"key": "node_id",
+							"value": "1001"
+						},
+						{
+							"key": "operation",
+							"value": "getDevicesAccessOfAllProfiles"
+						},
+						{
+							"key": "device_id",
+							"value": "1001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDevicesOnProfileAndNidAndDid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.12.167:8000/matterDevices?profile_id=1001&node_id=1001&operation=getDevicesAccessOfSingleProfile&device_id=1001",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"167"
+					],
+					"port": "8000",
+					"path": [
+						"matterDevices"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1001"
+						},
+						{
+							"key": "node_id",
+							"value": "1001"
+						},
+						{
+							"key": "operation",
+							"value": "getDevicesAccessOfSingleProfile"
+						},
+						{
+							"key": "device_id",
+							"value": "1001"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
