@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MatterItemView: View {
-  //TODO: check if it is not a binding, how to keep it updated
   var matterDevice: MatterDevice
   var profileId: Int
   var profileRole: String
@@ -36,21 +35,30 @@ struct MatterItemView: View {
     VStack{
       RoundedRectangle(cornerRadius: Constants.CGFloatConstants.cornerRadius)
         .fill(isOn ? Color(Constants.ColorAsset.sectionColorYellow) : Color(Constants.ColorAsset.accentColor))
-        .frame(width: Constants.CGFloatConstants.sectionMaxWidth, height: 100)
+        .frame(width: Constants.CGFloatConstants.portraitSectionWidth, height: 100)
         .overlay(content: {
           HStack {
             VStack(alignment: .leading) {
-              Text(matterDevice.nodeName)
-                .foregroundColor(.white)
-                .font(.custom("Matter Title", size: Constants.FontSize.font1))
-              Text("Total Devices: " + String(matterDevice.devices.count))
+              HStack {
+                Text(matterDevice.nodeName)
+                  .fontWeight(.heavy)
+                  .foregroundColor(.white)
+                  .font(.custom("Matter Title", size: Constants.FontSize.font1))
+                Image(systemName: isOn ? Constants.Icon.onSwitch : Constants.Icon.offSwitch)
+                  .foregroundColor(.white)
+                  .font(.custom("Matter Icon", size: Constants.FontSize.font1))
+              }.padding([.top])
+              Spacer()
+              Text(getTotalDeviceDescription())
+                .fontWeight(.heavy)
                 .foregroundColor(isOn ? Color(Constants.ColorAsset.fontColorRed) : Color(Constants.ColorAsset.fontColorGray))
                 .font(.custom("Matter Devices Summary", size: Constants.FontSize.font2))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-              Text("ON Devices: " + String(numOfOnDevice))
+              Spacer()
+              Text(getOnDeviceDescription())
+                .fontWeight(.heavy)
                 .foregroundColor(isOn ? Color(Constants.ColorAsset.fontColorRed) : Color(Constants.ColorAsset.fontColorGray))
                 .font(.custom("Matter Devices Status Count", size: Constants.FontSize.font2))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .padding([.bottom])
             }
             Toggle("", isOn: $isOn)
               .onChange(of: isOn) {
@@ -71,7 +79,7 @@ struct MatterItemView: View {
                 if profileRole == Constants.ProfileRole.child {
                   alertMsg = "No permission to change status for all devices of \(matterDevice.nodeName)"
                 }
-              }
+              }.tint(.green)//if we don't set the tint color here,the toggle tint color can be override by the tint color added to TabView
           }
           .padding([.leading, .trailing], Constants.CGFloatConstants.buttonPadding)
           .alert(isPresented: $showAlert, content: {
@@ -93,6 +101,7 @@ struct MatterItemView: View {
           }
           .tint(Color(Constants.ColorAsset.sectionColorRed))
         }
+        .animation(.easeInOut(duration: 1), value: isOn)
     }
   }
   func performUnpaired(matterDevice: MatterDevice) async throws {
@@ -110,7 +119,12 @@ struct MatterItemView: View {
       self.matterDeviceList = ls
     }
   }
-  
+  func getTotalDeviceDescription() -> String {
+    return "Total Devices: " + String(matterDevice.devices.count)
+  }
+  func getOnDeviceDescription() -> String {
+    return "ON Devices: " + String(numOfOnDevice)
+  }
 }
 
 #Preview {

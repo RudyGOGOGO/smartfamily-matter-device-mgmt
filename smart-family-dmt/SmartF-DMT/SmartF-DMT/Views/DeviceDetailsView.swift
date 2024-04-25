@@ -14,6 +14,11 @@ struct DeviceDetailsView: View {
   var profileRole: String
   var nodeId: Int
   var matterDeviceStore: MatterDeviceStore = MatterDeviceStore()
+  @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+  @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+  func isPortrait() -> Bool {
+    return horizontalSizeClass == .compact && verticalSizeClass == .regular
+  }
   init(profileId: Int, profileRole: String, nodeId: Int) {
     self.profileId = profileId
     self.profileRole = profileRole
@@ -33,12 +38,23 @@ struct DeviceDetailsView: View {
               .font(.custom("msgFont", size: Constants.FontSize.header2))
               .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
           } else {
-            List(matterDevice.devices, id: \.id) { device in
-              DeviceItemView(d: device, pr: profileRole, pid: profileId, nid: matterDevice.nodeId)
-              //set the list row background as transparent
-                .listRowBackground(Color.clear)
+            if isPortrait() {
+              List(matterDevice.devices, id: \.id) { device in
+                DeviceItemView(d: device, pr: profileRole, pid: profileId, nid: matterDevice.nodeId)
+                //set the list row background as transparent
+                  .listRowBackground(Color.clear)
+              }
+              .listStyle(PlainListStyle())//this PlainListStyle can make the list background transparent
+            } else {
+              ScrollView {
+                LazyVGrid(columns: [GridItem(.fixed(Constants.CGFloatConstants.landscapeSectionWidth)), GridItem(.fixed(Constants.CGFloatConstants.landscapeSectionWidth))]) {
+                  ForEach(matterDevice.devices, id: \.id) { device in
+                    DeviceItemView(d: device, pr: profileRole, pid: profileId, nid: matterDevice.nodeId)
+                  }
+                }
+              }
             }
-            .listStyle(PlainListStyle())//this PlainListStyle can make the list background transparent
+
           }
         }
         )
@@ -58,7 +74,7 @@ struct DeviceDetailsView: View {
       }
     }
     .ignoresSafeArea()
-    
+
   }
 }
 

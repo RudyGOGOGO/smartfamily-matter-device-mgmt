@@ -21,6 +21,11 @@ struct DeviceItemView: View {
   @State private var alertTitle: String = ""
   @State private var updatedDeviceLocation: String = ""
   @State private var profileDeviceAccessList: [ProfileDeviceAccess] = []
+  @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+  @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+  func isPortrait() -> Bool {
+    return horizontalSizeClass == .compact && verticalSizeClass == .regular
+  }
   var matterDeviceStore = MatterDeviceStore()
   var profileDeviceAccessStore = ProfileDeviceAccessStore()
   init(d: Device, pr: String, pid: Int, nid: Int) {
@@ -33,24 +38,31 @@ struct DeviceItemView: View {
     VStack{
       RoundedRectangle(cornerRadius: Constants.CGFloatConstants.cornerRadius)
         .fill(isOn ? Color(Constants.ColorAsset.sectionColorYellow) : Color(Constants.ColorAsset.accentColor))
-        .frame(width: 346, height: 100)
+        .frame(width: isPortrait() ? Constants.CGFloatConstants.portraitSectionWidth : Constants.CGFloatConstants.landscapeSectionWidth, height: 100)
         .overlay(content: {
           HStack {
             VStack(alignment: .leading) {
-              Text(device.deviceName)
-                .foregroundColor(.white)
-                .font(.custom("Device Title", size: Constants.FontSize.font1))
-                .padding([.top])
+              HStack {
+                Text(device.deviceName)
+                  .fontWeight(.heavy)
+                  .foregroundColor(.white)
+                  .font(.custom("Device Title", size: Constants.FontSize.font1))
+                Image(systemName: isOn ? Constants.Icon.onBulb : Constants.Icon.offBulb)
+                  .foregroundColor(.white)
+                  .font(.custom("Device Icon", size: Constants.FontSize.font1))
+              }.padding([.top])
               Spacer()
               Text("Location: " + String(device.location))
-                .foregroundColor(Color(Constants.ColorAsset.buttonColorGreen))
+                .fontWeight(.heavy)
+                .foregroundColor(isOn ? Color(Constants.ColorAsset.fontColorRed) : Color(Constants.ColorAsset.buttonColorBlue))
                 .font(.custom("Update Location", size: Constants.FontSize.font2))
                 .onTapGesture {
                   handleTapGestureForLocationUpdate()
                 }
               Spacer()
               Text("Update Access")
-                .foregroundColor(Color(Constants.ColorAsset.buttonColorGreen))
+                .fontWeight(.heavy)
+                .foregroundColor(isOn ? Color(Constants.ColorAsset.fontColorRed) : Color(Constants.ColorAsset.buttonColorBlue))
                 .font(.custom("Update Access", size: Constants.FontSize.font2))
                 .onTapGesture {
                   Task {@MainActor in
@@ -74,7 +86,7 @@ struct DeviceItemView: View {
                 }
               }.onAppear() {
                 self.isOn = device.status == Constants.DeviceStatus.deviceStatusOn
-              }
+              }.tint(.green)//if we don't set the tint color here,the toggle tint color can be override by the tint color added to TabView
           }
           .padding([.leading, .trailing], Constants.CGFloatConstants.buttonPadding)
           .alert(
@@ -103,6 +115,8 @@ struct DeviceItemView: View {
             
           }
         })
+        //animation when the color changes
+        .animation(.easeInOut(duration: 1), value: isOn)
     }
   }
   

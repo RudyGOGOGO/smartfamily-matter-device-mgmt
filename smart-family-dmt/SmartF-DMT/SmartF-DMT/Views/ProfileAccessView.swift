@@ -43,7 +43,7 @@ struct ProfileAccessView: View {
               alertMsg = "Failed to update access for \(profileName) to device \(deviceName), try again later"
             }
           }
-        }
+        }.tint(.green)
     }.alert(
       Text(Constants.AlertTitle.notice),
       isPresented: $showAlert

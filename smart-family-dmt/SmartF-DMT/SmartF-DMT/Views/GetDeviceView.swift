@@ -20,7 +20,7 @@ struct GetDeviceView: View {
   var body: some View {
     RoundedRectangle(cornerRadius: Constants.CGFloatConstants.cornerRadius)
       .fill(Color(Constants.ColorAsset.accentColor))
-      .frame(maxWidth: 346, maxHeight: 176)
+      .frame(maxWidth: Constants.CGFloatConstants.sectionMaxWidth, maxHeight: 176)
       .overlay(content: {
         VStack{
           Text("Get MATTER Devices")

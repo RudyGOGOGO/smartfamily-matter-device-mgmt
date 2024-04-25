@@ -37,7 +37,7 @@ struct ButtonText: View {
       .padding()
       .background(Color(color))
       .foregroundColor(.white)
-      .cornerRadius(Constants.TextValue.cornerRadius)
+      .cornerRadius(Constants.CGFloatConstants.cornerRadius)
   }
 }
 

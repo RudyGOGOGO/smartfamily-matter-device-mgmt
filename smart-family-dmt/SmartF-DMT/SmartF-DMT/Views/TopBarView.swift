@@ -32,6 +32,7 @@ struct TopBarView: View {
           .frame(width: 43, height: 48)
           .foregroundColor(.white)
           .padding([.trailing])
+          .font(.custom("Logout Font", size: Constants.FontSize.font2))
       }
     }
   }

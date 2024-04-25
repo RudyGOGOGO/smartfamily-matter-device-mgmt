@@ -32,17 +32,16 @@ struct MatterDeviceListView: View {
               .listRowSeparator(.hidden)
               .listRowBackground(Color.clear)
               /*
-               TODO: add the following leading padding because the MatterItemView shifts to the left a little after getting wrapped in NavigationLink
+               add the following leading padding because the MatterItemView shifts to the left a little after getting wrapped in NavigationLink
                */
               .padding([.leading], 20)
           }
           .listStyle(PlainListStyle())//this PlainListStyle can make the list background transparent
           /*
-           TODO: using onAppear is not efficient since after retrieving/discovering button gets triggered, it will perform the same action
+           using onAppear is not efficient since after retrieving/discovering button gets triggered, it will perform the same action
            however using onAppear is easy since it can keep the matter item view always consistent with the database
            */
           .onAppear(){
-            
             Task {@MainActor in
               self.matterDeviceList = try await matterDeviceStore.getMatterDevice(profileId: profileId)
             }

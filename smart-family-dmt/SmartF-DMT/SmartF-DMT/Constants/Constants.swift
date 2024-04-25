@@ -29,9 +29,6 @@ enum Constants {
     public static let font1 = CGFloat(20)
     public static let font2 = CGFloat(17)
   }
-  enum TextValue {
-    public static let cornerRadius = CGFloat(12)
-  }
   enum AvatarImage {
     public static let fatherAvatar = "FatherImage"
     public static let motherAvatar = "MotherImage"
@@ -55,6 +52,12 @@ enum Constants {
   enum Icon {
     public static let signOff = "person.fill.badge.minus"
     public static let disconnect = "trash.slash"
+    public static let deviceTab = "house"
+    public static let profileTab = "gear"
+    public static let onBulb = "lightbulb.min.fill"
+    public static let offBulb = "lightbulb"
+    public static let onSwitch = "lightswitch.on.square.fill"
+    public static let offSwitch = "lightswitch.on.square"
   }
   enum IntConstants {
     public static let msgDisplayTimeInNanoSeconds = 1500000000
@@ -62,7 +65,9 @@ enum Constants {
   enum CGFloatConstants {
     public static let buttonPadding = CGFloat(30)
     public static let cornerRadius = CGFloat(20)
-    public static let sectionMaxWidth = CGFloat(346)
+    public static let sectionMaxWidth = CGFloat(326)
+    public static let portraitSectionWidth = CGFloat(326)
+    public static let landscapeSectionWidth = CGFloat(246)
   }
   enum DeviceStatus {
     public static let deviceStatusOn = "ON"
