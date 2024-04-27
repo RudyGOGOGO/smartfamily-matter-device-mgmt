@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserStore {
+class UserStore: ObservableObject {
   enum UserStoreError: Error {
     case invalidResponse
     case NotFound
@@ -16,6 +16,7 @@ class UserStore {
   var sessionConfiguration: URLSessionConfiguration
   var baseURL: URL
   var profileEndpoint: URL
+  @Published var profile: Profile?
   private let decoder = JSONDecoder()
   
   init() {
@@ -25,7 +26,7 @@ class UserStore {
     self.profileEndpoint = URL(string: "profile", relativeTo: baseURL)!
   }
   
-  func getProfile(userName: String, pwd: String) async throws -> Profile? {
+  func getProfile(userName: String, pwd: String) async {
     var searchRequest = URLRequest(url: profileEndpoint)
     searchRequest.httpMethod = "GET"
     searchRequest.allHTTPHeaderFields = [
@@ -38,18 +39,27 @@ class UserStore {
       URLQueryItem(name: "password", value: pwd),
     ]
     searchRequest.url?.append(queryItems: queryParams)
-    let (userResp, response) = try await session.data(for: searchRequest)
-    guard let httpResponse = response as? HTTPURLResponse,
-          httpResponse.statusCode == 200
-    else {
-      return nil
-    }
     do {
+      let (userResp, response) = try await session.data(for: searchRequest)
+      guard let httpResponse = response as? HTTPURLResponse,
+            httpResponse.statusCode == 200
+      else {
+        await updateProfile(nil)
+        return
+  //      throw UserStoreError.NotFound
+      }
       let userResponse = try decoder.decode(UserResponse.self, from: userResp)
-      return userResponse.body
-    } catch let error {
-      print(error)
-      return nil
+      await updateProfile(userResponse.body)
+    } catch {
+      await updateProfile(nil)
+//      throw UserStoreError.invalidResponse
+    }
+  }
+
+  func updateProfile(_ p: Profile?) async {
+    await MainActor.run {
+      print("1234")
+      self.profile = p
     }
   }
 }

@@ -13,6 +13,9 @@ struct MatterDeviceListView: View {
   @Binding var matterDeviceList: [MatterDevice]
   @State var showAlert: Bool = false
   @State var alertMsg: String = ""
+  /*
+   Note: use @ObservedObject matterDeviceStore to reuse the same matterDeviceStore object
+   */
   var matterDeviceStore = MatterDeviceStore()
   var body: some View {
     RoundedRectangle(cornerRadius: Constants.CGFloatConstants.cornerRadius)

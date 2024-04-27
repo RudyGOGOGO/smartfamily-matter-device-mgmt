@@ -16,6 +16,9 @@ struct GetDeviceView: View {
   @Binding var matterDeviceList: [MatterDevice]
   var profileId: Int = 0
   var profileRole: String = ""
+  /*
+   Note: use @ObservedObject mdStore to reuse the same matterDeviceStore object
+   */
   var mdStore = MatterDeviceStore()
   var body: some View {
     RoundedRectangle(cornerRadius: Constants.CGFloatConstants.cornerRadius)

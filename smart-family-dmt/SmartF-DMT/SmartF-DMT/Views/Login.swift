@@ -17,7 +17,7 @@ struct Login: View {
   @Binding var profileName: String
   @Binding var profileRole: String
   @Binding var isAuthorized: Bool
-  var userStore = UserStore()
+  @ObservedObject var userStore: UserStore
   private let loginTitle = "SmartFamily-DMT"
   private let loginIdField = "Username"
   private let loginKeyField = "Password"
@@ -44,19 +44,19 @@ struct Login: View {
           self.showAlert = true
           self.alertMsg = "password is missing"
         }
-        Task{
-          //TODO: MainActor
-          let user = try await userStore.getProfile(userName: self.userName, pwd: self.password)
-          if user == nil {
+        Task{ @MainActor in
+          await userStore.getProfile(userName: self.userName, pwd: self.password)
+          print(userStore.profile == nil ? "1234" : "2345")
+          if userStore.profile == nil {
             self.showAlert = true
             self.alertMsg = "Wrong username or password"
             self.password = ""
           } else {
             self.isAuthorized = true
-            self.accountId = user!.accountId
-            self.profileId = user!.profileId
-            self.profileName = user!.profileName
-            self.profileRole = user!.profileRole
+            self.accountId = userStore.profile!.accountId
+            self.profileId = userStore.profile!.profileId
+            self.profileName = userStore.profile!.profileName
+            self.profileRole = userStore.profile!.profileRole
           }
         }
       } label: {
@@ -77,6 +77,7 @@ struct Login: View {
           profileId: .constant(0),
           profileName: .constant(""),
           profileRole: .constant(""),
-          isAuthorized: .constant(false))
+          isAuthorized: .constant(false),
+          userStore:UserStore())
   }.ignoresSafeArea()
 }

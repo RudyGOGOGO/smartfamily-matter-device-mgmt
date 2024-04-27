@@ -39,7 +39,7 @@ final class ProfileDeviceAccessStoreTest: XCTestCase {
 
   func test_updateProfileDeviceAccess() async throws {
     do {
-      let profileDeviceAccessList = try await profileDeviceAccessStore?.updateProfileDeviceAccess(profileId: Constants.ProfileId.father, nodeId: 1001, deviceId:1001, access: true)
+      let profileDeviceAccessList = try await profileDeviceAccessStore?.updateProfileDeviceAccess(profileId: Constants.ProfileId.father, nodeId: 1, deviceId:1, access: true)
       if profileDeviceAccessList != nil {
       }
       XCTAssertTrue(true)

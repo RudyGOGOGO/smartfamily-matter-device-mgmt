@@ -26,6 +26,9 @@ struct DeviceItemView: View {
   func isPortrait() -> Bool {
     return horizontalSizeClass == .compact && verticalSizeClass == .regular
   }
+  /*
+   Note: use @ObservedObject matterDeviceStore to reuse the same matterDeviceStore object
+   */
   var matterDeviceStore = MatterDeviceStore()
   var profileDeviceAccessStore = ProfileDeviceAccessStore()
   init(d: Device, pr: String, pid: Int, nid: Int) {
@@ -245,7 +248,11 @@ struct UpdateLocationAlertView: View {
       }) {
         Text("OK").foregroundColor(Color.blue)
       }
-      .disabled(updatedDeviceLocation.isEmpty)
+      /*
+       .disabled(updatedDeviceLocation.isEmpty) makes the first update fail to update the location, once it gets suppressed, it works
+       we need to figure out the root cause
+       */
+//      .disabled(updatedDeviceLocation.isEmpty)
       TextField("Location Name", text: $updatedDeviceLocation).textContentType(.nickname)
     }
   }

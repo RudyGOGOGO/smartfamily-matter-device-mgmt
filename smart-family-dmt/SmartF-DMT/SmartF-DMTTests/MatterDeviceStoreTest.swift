@@ -60,7 +60,7 @@ final class MatterDeviceStoreTest: XCTestCase {
 
   func test_deleteMatterDeviceOnMatterNodeId() async throws {
     do {
-      let isSuccess = try await matterDeviceStore?.deleteMatterDeviceOnMatterNodeId(nodeId: 1001)
+      let isSuccess = try await matterDeviceStore?.deleteMatterDeviceOnMatterNodeId(nodeId: 1)
       if isSuccess != nil {
       }
       XCTAssertTrue(true)
@@ -73,7 +73,7 @@ final class MatterDeviceStoreTest: XCTestCase {
     do {
       let isSuccess = try await matterDeviceStore?.updateDeviceStatus(
         profileId: Constants.ProfileId.father,
-        matterDevice: MatterDevice(nodeId: 1001, nodeName: "testNodeName", devices: [Device(deviceId: 1001, deviceName: "deviceName", access: true, status: Constants.DeviceStatus.deviceStatusOn, location: "textLocationName")]),
+        matterDevice: MatterDevice(nodeId: 1001, nodeName: "testNodeName", devices: [Device(deviceId: 1, deviceName: "deviceName", access: true, status: Constants.DeviceStatus.deviceStatusOn, location: "textLocationName")]),
         status: Constants.DeviceStatus.deviceStatusOn)
       if isSuccess != nil {
       }
@@ -87,8 +87,8 @@ final class MatterDeviceStoreTest: XCTestCase {
     do {
       let isSuccess = try await matterDeviceStore?.updateDeviceStatus(
         profileId: Constants.ProfileId.father,
-        nodeId: 1001,
-        deviceId: 1001,
+        nodeId: 1,
+        deviceId: 1,
         status: Constants.DeviceStatus.deviceStatusOff
       )
       if isSuccess != nil {
@@ -103,8 +103,8 @@ final class MatterDeviceStoreTest: XCTestCase {
     do {
       let isSuccess = try await matterDeviceStore?.updateDeviceLocation(
         profileId: Constants.ProfileId.father,
-        nodeId: 1001,
-        deviceId: 1001,
+        nodeId: 1,
+        deviceId: 1,
         location: "testLocation"
       )
       if isSuccess != nil {

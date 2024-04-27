@@ -55,9 +55,7 @@ class ProfileDeviceAccessStore {
     do {
       let pdaResponse = try decoder.decode(ProfileDeviceAccessResponse.self, from: mdResp)
       return pdaResponse.body.profileDeviceAccessList
-    } catch let error {
-      //TODO: handle the error properly
-      print(error)
+    } catch {
       return []
     }
   }

@@ -19,6 +19,10 @@ struct ContentView: View {
   func isPortrait() -> Bool {
     return horizontalSizeClass == .compact && verticalSizeClass == .regular
   }
+  @ObservedObject var userStore: UserStore
+  /*
+   Note: use @ObservedObject matterDeviceStore to reuse the same matterDeviceStore object
+   */
   var matterDeviceStore = MatterDeviceStore()
   var body: some View {
     ZStack {
@@ -29,7 +33,8 @@ struct ContentView: View {
                 profileId: $profileId,
                 profileName: $profileName,
                 profileRole: $profileRole,
-                isAuthorized: $isAuthorized)
+                isAuthorized: $isAuthorized,
+                userStore: userStore)
         } else {
           TopBarView(isAuthorized: $isAuthorized,
                      accountId: $accountId,
@@ -144,5 +149,5 @@ struct ContentView: View {
 }
 
 #Preview {
-  ContentView()
+  ContentView(userStore: UserStore())
 }

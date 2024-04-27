@@ -13,6 +13,9 @@ struct DeviceDetailsView: View {
   var profileId: Int
   var profileRole: String
   var nodeId: Int
+  /*
+   Note: use @ObservedObject matterDeviceStore to reuse the same MatterDeviceStore object
+   */
   var matterDeviceStore: MatterDeviceStore = MatterDeviceStore()
   @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
   @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?

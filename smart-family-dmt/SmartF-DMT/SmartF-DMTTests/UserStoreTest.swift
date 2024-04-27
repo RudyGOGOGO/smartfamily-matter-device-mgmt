@@ -28,13 +28,6 @@ final class UserStoreTest: XCTestCase {
   }
 
   func test_getProfile() async throws {
-    do {
-      let p = try await userStore?.getProfile(userName: "1001", pwd: "1001")
-      if p != nil {
-      }
-      XCTAssertTrue(true)
-    } catch {
-      XCTAssertTrue(true)
-    }
+    await userStore?.getProfile(userName: "1001", pwd: "1001")
   }
 }

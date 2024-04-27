@@ -16,6 +16,9 @@ struct MatterItemView: View {
   @State private var showAlert: Bool = false
   @State private var alertMsg: String = ""
   @Binding var matterDeviceList: [MatterDevice]
+  /*
+   Note: use @ObservedObject matterDeviceStore to reuse the same matterDeviceStore object
+   */
   var matterDeviceStore = MatterDeviceStore()
   init(md: MatterDevice, pr: String, pid: Int, mdList: Binding<[MatterDevice]>) {
     matterDevice = md

@@ -16,6 +16,9 @@ struct ProfileAccessView: View {
   var deviceId: Int
   var deviceName: String
   var nodeId: Int
+  /*
+   Note: use @ObservedObject profileDeviceAccessStore to reuse the same ProfileDeviceAccessStore object
+   */
   var profileDeviceAccessStore = ProfileDeviceAccessStore()
   init(pid: Int, pName: String, did: Int, dName: String, nid: Int, access: Bool) {
     self.profileId = pid
