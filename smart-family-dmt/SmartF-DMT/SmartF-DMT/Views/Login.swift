@@ -17,7 +17,7 @@ struct Login: View {
   @Binding var profileName: String
   @Binding var profileRole: String
   @Binding var isAuthorized: Bool
-  private let userStore = UserStore()
+  var userStore = UserStore()
   private let loginTitle = "SmartFamily-DMT"
   private let loginIdField = "Username"
   private let loginKeyField = "Password"

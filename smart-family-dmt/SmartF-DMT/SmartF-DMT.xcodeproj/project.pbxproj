@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390093A72BDB5B3500B188F7 /* UserModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390093A62BDB5B3500B188F7 /* UserModelTest.swift */; };
+		390093A92BDB62D800B188F7 /* MatterDeviceResponseModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390093A82BDB62D800B188F7 /* MatterDeviceResponseModelTest.swift */; };
+		390093AB2BDB6AAB00B188F7 /* ProfileDeviceAccessResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390093AA2BDB6AAB00B188F7 /* ProfileDeviceAccessResponseModel.swift */; };
+		390093AD2BDB6DF700B188F7 /* UserStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390093AC2BDB6DF700B188F7 /* UserStoreTest.swift */; };
+		390093AF2BDB87D900B188F7 /* MatterDeviceStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390093AE2BDB87D900B188F7 /* MatterDeviceStoreTest.swift */; };
+		390093B12BDBFDE100B188F7 /* ProfileDeviceAccessStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390093B02BDBFDE100B188F7 /* ProfileDeviceAccessStoreTest.swift */; };
+		390093B32BDC008E00B188F7 /* ConstantTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390093B22BDC008E00B188F7 /* ConstantTest.swift */; };
+		3902D3D02BDC88A200833D6A /* LoginUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3902D3CF2BDC88A200833D6A /* LoginUITest.swift */; };
 		391A7EA32BCA3549004A4795 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A7EA22BCA3549004A4795 /* Login.swift */; };
 		391A7EA72BCA38D3004A4795 /* MatterDeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A7EA62BCA38D3004A4795 /* MatterDeviceResponse.swift */; };
 		391A7EAA2BCA3E0A004A4795 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A7EA92BCA3E0A004A4795 /* Constants.swift */; };
@@ -68,7 +76,34 @@
 		};
 /* End PBXBuildRule section */
 
+/* Begin PBXContainerItemProxy section */
+		390093A12BDB59EB00B188F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 395FA8762BC7891400B39E39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 395FA87D2BC7891400B39E39;
+			remoteInfo = "SmartF-DMT";
+		};
+		3902D3CA2BDC863800833D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 395FA8762BC7891400B39E39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 395FA87D2BC7891400B39E39;
+			remoteInfo = "SmartF-DMT";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3900939D2BDB59EB00B188F7 /* SmartF-DMTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartF-DMTTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		390093A62BDB5B3500B188F7 /* UserModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelTest.swift; sourceTree = "<group>"; };
+		390093A82BDB62D800B188F7 /* MatterDeviceResponseModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatterDeviceResponseModelTest.swift; sourceTree = "<group>"; };
+		390093AA2BDB6AAB00B188F7 /* ProfileDeviceAccessResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeviceAccessResponseModel.swift; sourceTree = "<group>"; };
+		390093AC2BDB6DF700B188F7 /* UserStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoreTest.swift; sourceTree = "<group>"; };
+		390093AE2BDB87D900B188F7 /* MatterDeviceStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatterDeviceStoreTest.swift; sourceTree = "<group>"; };
+		390093B02BDBFDE100B188F7 /* ProfileDeviceAccessStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeviceAccessStoreTest.swift; sourceTree = "<group>"; };
+		390093B22BDC008E00B188F7 /* ConstantTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantTest.swift; sourceTree = "<group>"; };
+		3902D3C42BDC863800833D6A /* SmartF-DMTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartF-DMTUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3902D3CF2BDC88A200833D6A /* LoginUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITest.swift; sourceTree = "<group>"; };
 		391A7EA22BCA3549004A4795 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		391A7EA62BCA38D3004A4795 /* MatterDeviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatterDeviceResponse.swift; sourceTree = "<group>"; };
 		391A7EA92BCA3E0A004A4795 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -96,6 +131,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3900939A2BDB59EB00B188F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3902D3C12BDC863800833D6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		395FA87B2BC7891400B39E39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +155,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3900939E2BDB59EB00B188F7 /* SmartF-DMTTests */ = {
+			isa = PBXGroup;
+			children = (
+				390093A62BDB5B3500B188F7 /* UserModelTest.swift */,
+				390093A82BDB62D800B188F7 /* MatterDeviceResponseModelTest.swift */,
+				390093AA2BDB6AAB00B188F7 /* ProfileDeviceAccessResponseModel.swift */,
+				390093AC2BDB6DF700B188F7 /* UserStoreTest.swift */,
+				390093AE2BDB87D900B188F7 /* MatterDeviceStoreTest.swift */,
+				390093B02BDBFDE100B188F7 /* ProfileDeviceAccessStoreTest.swift */,
+				390093B22BDC008E00B188F7 /* ConstantTest.swift */,
+			);
+			path = "SmartF-DMTTests";
+			sourceTree = "<group>";
+		};
+		3902D3C52BDC863800833D6A /* SmartF-DMTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3902D3CF2BDC88A200833D6A /* LoginUITest.swift */,
+			);
+			path = "SmartF-DMTUITests";
+			sourceTree = "<group>";
+		};
 		391A7EA82BCA3DF7004A4795 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				395FA8802BC7891400B39E39 /* SmartF-DMT */,
+				3900939E2BDB59EB00B188F7 /* SmartF-DMTTests */,
+				3902D3C52BDC863800833D6A /* SmartF-DMTUITests */,
 				395FA87F2BC7891400B39E39 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				395FA87E2BC7891400B39E39 /* SmartF-DMT.app */,
+				3900939D2BDB59EB00B188F7 /* SmartF-DMTTests.xctest */,
+				3902D3C42BDC863800833D6A /* SmartF-DMTUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +262,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3900939C2BDB59EB00B188F7 /* SmartF-DMTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 390093A32BDB59EB00B188F7 /* Build configuration list for PBXNativeTarget "SmartF-DMTTests" */;
+			buildPhases = (
+				390093992BDB59EB00B188F7 /* Sources */,
+				3900939A2BDB59EB00B188F7 /* Frameworks */,
+				3900939B2BDB59EB00B188F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				390093A22BDB59EB00B188F7 /* PBXTargetDependency */,
+			);
+			name = "SmartF-DMTTests";
+			productName = "SmartF-DMTTests";
+			productReference = 3900939D2BDB59EB00B188F7 /* SmartF-DMTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3902D3C32BDC863800833D6A /* SmartF-DMTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3902D3CC2BDC863800833D6A /* Build configuration list for PBXNativeTarget "SmartF-DMTUITests" */;
+			buildPhases = (
+				3902D3C02BDC863800833D6A /* Sources */,
+				3902D3C12BDC863800833D6A /* Frameworks */,
+				3902D3C22BDC863800833D6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3902D3CB2BDC863800833D6A /* PBXTargetDependency */,
+			);
+			name = "SmartF-DMTUITests";
+			productName = "SmartF-DMTUITests";
+			productReference = 3902D3C42BDC863800833D6A /* SmartF-DMTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		395FA87D2BC7891400B39E39 /* SmartF-DMT */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 395FA88C2BC7891500B39E39 /* Build configuration list for PBXNativeTarget "SmartF-DMT" */;
@@ -218,6 +329,15 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					3900939C2BDB59EB00B188F7 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 395FA87D2BC7891400B39E39;
+					};
+					3902D3C32BDC863800833D6A = {
+						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
+						TestTargetID = 395FA87D2BC7891400B39E39;
+					};
 					395FA87D2BC7891400B39E39 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -237,11 +357,27 @@
 			projectRoot = "";
 			targets = (
 				395FA87D2BC7891400B39E39 /* SmartF-DMT */,
+				3900939C2BDB59EB00B188F7 /* SmartF-DMTTests */,
+				3902D3C32BDC863800833D6A /* SmartF-DMTUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3900939B2BDB59EB00B188F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3902D3C22BDC863800833D6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		395FA87C2BC7891400B39E39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,6 +411,28 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		390093992BDB59EB00B188F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390093AB2BDB6AAB00B188F7 /* ProfileDeviceAccessResponseModel.swift in Sources */,
+				390093AF2BDB87D900B188F7 /* MatterDeviceStoreTest.swift in Sources */,
+				390093A72BDB5B3500B188F7 /* UserModelTest.swift in Sources */,
+				390093B12BDBFDE100B188F7 /* ProfileDeviceAccessStoreTest.swift in Sources */,
+				390093B32BDC008E00B188F7 /* ConstantTest.swift in Sources */,
+				390093AD2BDB6DF700B188F7 /* UserStoreTest.swift in Sources */,
+				390093A92BDB62D800B188F7 /* MatterDeviceResponseModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3902D3C02BDC863800833D6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3902D3D02BDC88A200833D6A /* LoginUITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		395FA87A2BC7891400B39E39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,7 +463,97 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		390093A22BDB59EB00B188F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 395FA87D2BC7891400B39E39 /* SmartF-DMT */;
+			targetProxy = 390093A12BDB59EB00B188F7 /* PBXContainerItemProxy */;
+		};
+		3902D3CB2BDC863800833D6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 395FA87D2BC7891400B39E39 /* SmartF-DMT */;
+			targetProxy = 3902D3CA2BDC863800833D6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		390093A42BDB59EB00B188F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7N5G75446;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rudylearn.SmartF-DMTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartF-DMT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartF-DMT";
+			};
+			name = Debug;
+		};
+		390093A52BDB59EB00B188F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7N5G75446;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rudylearn.SmartF-DMTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartF-DMT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartF-DMT";
+			};
+			name = Release;
+		};
+		3902D3CD2BDC863800833D6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7N5G75446;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rudylearn.SmartF-DMTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SmartF-DMT";
+			};
+			name = Debug;
+		};
+		3902D3CE2BDC863800833D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7N5G75446;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rudylearn.SmartF-DMTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SmartF-DMT";
+			};
+			name = Release;
+		};
 		395FA88A2BC7891500B39E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -492,6 +740,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		390093A32BDB59EB00B188F7 /* Build configuration list for PBXNativeTarget "SmartF-DMTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				390093A42BDB59EB00B188F7 /* Debug */,
+				390093A52BDB59EB00B188F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3902D3CC2BDC863800833D6A /* Build configuration list for PBXNativeTarget "SmartF-DMTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3902D3CD2BDC863800833D6A /* Debug */,
+				3902D3CE2BDC863800833D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		395FA8792BC7891400B39E39 /* Build configuration list for PBXProject "SmartF-DMT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

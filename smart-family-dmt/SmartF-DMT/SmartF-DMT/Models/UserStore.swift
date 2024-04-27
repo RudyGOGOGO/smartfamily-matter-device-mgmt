@@ -12,10 +12,10 @@ class UserStore {
     case invalidResponse
     case NotFound
   }
-  private let session: URLSession
-  private let sessionConfiguration: URLSessionConfiguration
-  private let baseURL: URL
-  private let profileEndpoint: URL
+  var session: URLSession
+  var sessionConfiguration: URLSessionConfiguration
+  var baseURL: URL
+  var profileEndpoint: URL
   private let decoder = JSONDecoder()
   
   init() {
