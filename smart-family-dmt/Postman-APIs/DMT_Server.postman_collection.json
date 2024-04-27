@@ -12,26 +12,26 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.12.167:8000/user?user_name=4044171080&password=4044171080",
+					"raw": "http://127.0.0.1:8000/profile?user_name=1001&password=1001",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [
-						"user"
+						"profile"
 					],
 					"query": [
 						{
 							"key": "user_name",
-							"value": "4044171080"
+							"value": "1001"
 						},
 						{
 							"key": "password",
-							"value": "4044171080"
+							"value": "1001"
 						}
 					]
 				}
@@ -44,13 +44,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.12.167:8000/matterDevices?profile_id=1001&node_id=1001",
+					"raw": "http://127.0.0.1:8000/matterDevices?profile_id=1001&node_id=1001",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [
@@ -76,13 +76,13 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.12.167:8000/discover?profile_id=1001",
+					"raw": "http://127.0.0.1:8000/discover?profile_id=1001",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [
@@ -104,13 +104,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.12.167:8000/matterDevices?node_id=1002",
+					"raw": "http://127.0.0.1:8000/matterDevices?node_id=1002",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [
@@ -141,13 +141,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.12.167:8000/matterDevices",
+					"raw": "http://127.0.0.1:8000/matterDevices",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [
@@ -172,13 +172,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.12.167:8000/matterDevices",
+					"raw": "http://127.0.0.1:8000/matterDevices",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [
@@ -203,13 +203,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.12.167:8000/matterDevices",
+					"raw": "http://127.0.0.1:8000/matterDevices",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [
@@ -225,13 +225,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.12.167:8000/matterDevices?profile_id=1001&node_id=1001&operation=getDevicesAccessOfAllProfiles&device_id=1001",
+					"raw": "http://127.0.0.1:8000/matterDevices?profile_id=1001&node_id=1001&operation=getDevicesAccessOfAllProfiles&device_id=1001",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [
@@ -265,13 +265,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.12.167:8000/matterDevices?profile_id=1001&node_id=1001&operation=getDevicesAccessOfSingleProfile&device_id=1001",
+					"raw": "http://127.0.0.1:8000/matterDevices?profile_id=1001&node_id=1001&operation=getDevicesAccessOfSingleProfile&device_id=1001",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"12",
-						"167"
+						"127",
+						"0",
+						"0",
+						"1"
 					],
 					"port": "8000",
 					"path": [

@@ -74,7 +74,7 @@ enum Constants {
     public static let deviceStatusOff = "OFF"
   }
   enum URlConstant {
-    public static let serverHost = "192.168.12.167"
+    public static let serverHost = "127.0.0.1"
     public static let serverPort = "8000"
     public static let matterDeviceEndpoint = "matterDevices"
     public static let discoverEndpoint = "discover"

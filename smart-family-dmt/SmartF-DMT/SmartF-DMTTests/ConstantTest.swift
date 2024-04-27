@@ -72,7 +72,7 @@ final class ConstantTest: XCTestCase {
       XCTAssertTrue(Constants.DeviceStatus.deviceStatusOn == "ON")
       XCTAssertTrue(Constants.DeviceStatus.deviceStatusOff == "OFF")
 
-      XCTAssertTrue(Constants.URlConstant.serverHost == "192.168.12.167")
+      XCTAssertTrue(Constants.URlConstant.serverHost == "127.0.0.1")
       XCTAssertTrue(Constants.URlConstant.serverPort == "8000")
       XCTAssertTrue(Constants.URlConstant.matterDeviceEndpoint == "matterDevices")
       XCTAssertTrue(Constants.URlConstant.discoverEndpoint == "discover")
